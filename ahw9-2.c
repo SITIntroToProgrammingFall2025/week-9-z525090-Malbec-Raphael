@@ -17,10 +17,10 @@ int main() {
             }
         }
     }
-
+    
     for (int i = 0; i < n; i++) {
-        if (i > 0) printf(" ");
         printf("%d", array[i]);
+        if (i < n - 1) printf(" ");
     }
     printf("\n");
 
