@@ -4,17 +4,9 @@ int main() {
     int array[5];
     int i, j, temp;
     
-    printf("Enter 5 numbers:\n");
-    
     for (i = 0; i < 5; i++) {
         scanf("%d", &array[i]);
     }
-    
-    printf("Before sorting: ");
-    for (i = 0; i < 5; i++) {
-        printf("%d ", array[i]);
-    }
-    printf("\n");
     
     for (i = 0; i < 4; i++) {
         for (j = 0; j < 4; j++) {
@@ -25,11 +17,12 @@ int main() {
             }
         }
     }
-    
-    printf("After sorting: ");
+
     for (i = 0; i < 5; i++) {
-        printf("%d ", array[i]);
+        if (i > 0) printf(" ");
+        printf("%d", array[i]);
     }
+    printf("\n");
+    
     return 0;
 }
-
