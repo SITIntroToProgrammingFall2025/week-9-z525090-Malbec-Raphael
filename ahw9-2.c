@@ -1,28 +1,30 @@
 #include <stdio.h>
 
-int main() {
-    int array[100];
-    int n = 0;
+#define ARR_SIZE 5
 
-    while (scanf("%d", &array[n]) == 1) {
-        n++;
+int main() {
+    int array[ARR_SIZE];
+    int i, j, temp;
+
+    for (i = 0; i < ARR_SIZE; i++) {
+        scanf("%d", &array[i]);
     }
 
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - 1; j++) {
+    for (i = 0; i < ARR_SIZE - 1; i++) {
+        for (j = 0; j < ARR_SIZE - 1; j++) {
             if (array[j] > array[j + 1]) {
-                int temp = array[j];
+                temp = array[j];
                 array[j] = array[j + 1];
                 array[j + 1] = temp;
             }
         }
     }
-    
-    for (int i = 0; i < n; i++) {
-        printf("%d", array[i]);
-        if (i < n - 1) printf(" ");
+
+
+    printf("sorted array:\n");
+    for (i = 0; i < ARR_SIZE; i++) {
+        printf("%d ", array[i]); 
     }
-    printf("\n");
 
     return 0;
 }
